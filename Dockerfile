@@ -1,7 +1,7 @@
 FROM ubuntu:focal
 MAINTAINER Mike Wilson <knobby@burntsheep.com>
 
-# If the server is updating when start with docker start
+# Tell the server to update on start
 ENV UPDATEONSTART 1
 
 # Install things we need - special hoops to get tmux 2.0

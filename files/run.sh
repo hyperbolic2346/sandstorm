@@ -39,30 +39,9 @@ else
   fi
 fi
 
-#[ ! -d serverfiles/insurgency/addons/metamod ] && mkdir -p serverfiles/insurgency/addons && cp -r /defaults/addons/meta* serverfiles/insurgency/addons/ && chmod a+r -R serverfiles/insurgency/addons/*
-#[ ! -d serverfiles/insurgency/addons/sourcemod ] && mkdir -p serverfiles/insurgency/addons/sourcemod && cp -r /defaults/addons/sourcemod/* serverfiles/insurgency/addons/sourcemod/ && chmod a+r -r serverfiles/insurgency/addons/*
-#[ ! -f addons ] && [ ! -L addons ] && ln -s serverfiles/insurgency/addons addons
-#[ ! -f mapcycle_cooperative.txt ] && [ ! -L mapcycle_cooperative.txt ] && ln -s serverfiles/insurgency/mapcycle_cooperative.txt mapcycle_cooperative.txt
-#[ ! -f subscribed_file_ids.txt ] && [ ! -L subscribed_file_ids.txt ] && ln -s serverfiles/insurgency/subscribed_file_ids.txt subscribed_file_ids.txt
-#[ ! -f webapi_authkey.txt ] && [ ! -L webapi_authkey.txt ] && ln -s serverfiles/insurgency/webapi_authkey.txt webapi_authkey.txt
-#[ ! -f log ] && [ ! -L log ] && ln -s /linuxgsm/log log
-#[ ! -f cfg ] && [ ! -L cfg ] && ln -s serverfiles/insurgency/cfg cfg
 [ ! -f Admins.txt ] && [ ! -L Admins.txt ] && ln -s serverfiles/Insurgency/Config/Server/Admins.txt Admins.txt
 [ ! -f MapCycle.txt ] && [ ! -L MapCycle.txt ] && ln -s serverfiles/Insurgency/Config/Server/MapCycle.txt MapCycle.txt
 [ ! -f Game.ini ] && [ ! -L Game.ini ] && ln -s serverfiles/Insurgency/Config/Server/Game.ini Game.ini
-
-
-# If there is uncommented line in the file
-#CRONNUMBER=`grep -v "^#" crontab | wc -l`
-#if [ $CRONNUMBER -gt 0 ]; then
-#	echo "Loading crontab..."
-#	# We load the crontab file if it exist.
-#	crontab /insurgency/crontab
-#	# Cron is attached to this process
-#	sudo cron -f &
-#else
-#	echo "No crontab set."
-#fi
 
 # Start the insurgency service using the generated config
 

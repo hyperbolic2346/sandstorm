@@ -17,8 +17,6 @@ cd /insurgency
 
 # make sure we have these symlinks(could be a new volume)
 [ ! -f linuxgsm.sh ] && [ ! -L linuxgsm.sh ] && cp /defaults/linuxgsm.sh linuxgsm.sh && chmod a+x linuxgsm.sh
-#[ ! -f crontab ] && cp /defaults/crontab crontab
-
 [ ! -f inssserver ] && [ ! -L inssserver ] && ./linuxgsm.sh inssserver
 
 if [ ! -d "serverfiles" ] || [ ! -f "serverfiles/srcds_linux" ]; then

@@ -1,4 +1,4 @@
-FROM ubuntu:bionic
+FROM ubuntu:focal
 MAINTAINER Mike Wilson <knobby@burntsheep.com>
 
 # If the server is updating when start with docker start
